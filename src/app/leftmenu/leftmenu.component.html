@@ -83,6 +83,16 @@
         </li>
     </a>
 
+    <a class="" routerLink="/chart" routerLinkActive #chart="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': chart.isActive }">
+
+
+            <span class="menu-title"><i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'chart' | language}}</span>
+
+        </li>
+    </a>
+
     <a class="" routerLink="/contact" routerLinkActive #contact="routerLinkActive">
         <li class="listm" [ngClass]="{ 'active': contact.isActive }">
 

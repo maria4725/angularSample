@@ -16,9 +16,10 @@ import { ContactComponent } from './contact/contact.component';
 import { PostcardComponent } from './postcard/postcard.component';
 import { MoviecardComponent } from './moviecard/moviecard.component';
 import { EcomComponent } from './ecom/ecom.component';
+// import { ChartComponent } from './chart/chart.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'lc', component: LcComponent },
@@ -28,12 +29,13 @@ const routes: Routes = [
   { path: 'userview', component: UserviewComponent },
   { path: 'dummy', component: DummyComponent },
   { path: 'tabview', component: TviewComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'cardhover', component: CardhoverComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'postcard', component: PostcardComponent },
   { path: 'moviecard', component: MoviecardComponent },
   { path: 'ecommerce', component: EcomComponent },
+  // { path: 'chart', component: ChartComponent },
 ];
 
 @NgModule({

@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,8 +32,8 @@ import { ContactComponent } from './contact/contact.component';
 import { PostcardComponent } from './postcard/postcard.component';
 import { MoviecardComponent } from './moviecard/moviecard.component';
 import { EcomComponent } from './ecom/ecom.component';
-
-
+import { ChartComponent } from './chart/chart.component';
+// import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -61,8 +61,8 @@ import { EcomComponent } from './ecom/ecom.component';
     ContactComponent,
     PostcardComponent,
     MoviecardComponent,
-    EcomComponent
-
+    EcomComponent,
+    // ChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,11 +70,11 @@ import { EcomComponent } from './ecom/ecom.component';
     FontAwesomeModule,
     FormsModule,
     NgbCollapseModule,
-    HttpClientModule
-
+    HttpClientModule,
+    // ChartsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-export class AppBootstrapModule { }
+export class AppModule {}
+export class AppBootstrapModule {}

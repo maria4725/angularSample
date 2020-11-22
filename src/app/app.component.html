@@ -8,6 +8,14 @@
             </div>
 
         </div>
+        <div class="col-2 cols" [hidden]="!tog">
+
+            <div>
+                <!-- <app-leftmenu></app-leftmenu> -->
+                <label>iconNav</label>
+            </div>
+
+        </div>
         <div class="displayPageWithNavbar" [ngClass]="{'col-10 nop':!tog,'col-12 nop':tog}">
 
             <div class="tog" (click)="toggle()">

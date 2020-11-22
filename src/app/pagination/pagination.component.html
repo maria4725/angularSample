@@ -75,7 +75,7 @@
 
                 <tr class="bar" *ngFor="let tv of comments;index as i">
                     <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.postId }}</td>
-                    <td *ngIf="tv.id>=initial&&tv.id<=end"><a (click)="view(i)" routerLink="/tabview/" class="btn btn-info">{{ tv.id }}</a></td>
+                    <td *ngIf="tv.id>=initial&&tv.id<=end"><a (click)="view(tv.id)" routerLink="/tabview/" class="btn btn-info">{{ tv.id }}</a></td>
                     <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.name }}</td>
                     <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.body }}</td>
                 </tr>

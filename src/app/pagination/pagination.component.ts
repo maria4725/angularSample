@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { TabviewService } from '../others/tabview.service';
 import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../api.service';
-import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
-
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-pagination',
@@ -32,7 +30,7 @@ export class PaginationComponent implements OnInit {
   loaddata(): void {
     console.log(this.api.get('comments'));
     // this.http
-    //   .get('https://jsonplaceholder.typicode.com/comments')
+    //   .get('https://jsonplaceholder.typicode.com/')
     this.api.get('comments')
       .subscribe((data: any[]) => {
         console.log(data);

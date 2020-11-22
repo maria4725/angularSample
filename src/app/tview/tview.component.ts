@@ -8,7 +8,7 @@ import { TabviewService } from '../others/tabview.service';
 export class TviewComponent implements OnInit {
   comments =
     {
-      "postId": 1,
+      "postId": -1,
       "id": 1,
       "name": "id labore ex et quam laborum",
       "email": "Eliseo@gardner.biz",
@@ -17,6 +17,11 @@ export class TviewComponent implements OnInit {
   constructor(private tab:TabviewService) {}
 
   ngOnInit(): void {
-    this.comments=this.tab.gettvalue();
+    // this.comments=this.tab.gettvalue();
+    this.tab.gettvalue().subscribe(
+      (data:any)=>{
+        this.comments=data
+      }
+    )
   }
 }

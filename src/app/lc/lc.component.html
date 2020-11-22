@@ -1,0 +1,20 @@
+<button (click)="showit()">hi</button>
+
+<div *ngIf="showme">
+    <p>ngIf fDirictive</p>
+</div>
+
+<div [hidden]="showme">
+    <p>hidden Dirictive</p>
+</div>
+
+<div [ngClass]="{ hi: showme, hi2: !showme }">
+    <p>Class directive</p>
+</div>
+<div [ngStyle]="{ color: showme ? 'green' : 'red' }">hello wolrd</div>
+
+<div class="bar" *ngFor="let tv of dummylist">
+    <p>hi{{tv}}
+
+    </p>
+</div>

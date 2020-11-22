@@ -1,0 +1,66 @@
+.container {
+    margin: 20px auto;
+    padding: 20px 20px 20px;
+    width: 410px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 20px #dee7ebe1, 0 1px 4px #0000004d;
+}
+
+small {
+    color: red;
+    display: block;
+}
+
+.login h1 {
+    margin: -20px -20px 30px;
+    line-height: 40px;
+    font-size: 24px;
+    color: #a3a09f;
+    text-align: center;
+    background: #f3f3f3;
+    border-bottom: 1px solid #f7a9a9;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 1px #f7a9a9;
+}
+
+input[type=text],
+input[type=password] {
+    padding: 10px 30px 10px 10px;
+    margin: 8px 0;
+    color: #333;
+    border: 2px dashed;
+    border-color: #cfcdcda8;
+    border-radius: 3px;
+    align-items: center;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: large;
+    padding: 14px 30px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #f1a9a7;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #f1a9a7;
+    background-color: #f1a9a7;
+}
+
+.input-group-text {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    margin: 8px 0px 8px 0px;
+}

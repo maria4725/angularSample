@@ -1,0 +1,120 @@
+<ul>
+    <div class="logo"><img src="/assets/img/logo-text.png" alt="homepage"></div>
+
+
+    <a class="" routerLink="/home" routerLinkActive #home="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': home.isActive }">
+            <span class="menu-title"><i class="fas fa-home" style="font-size:20px;"></i>
+            {{'Home' | language}}</span></li>
+    </a>
+
+    <a class="" routerLink="/login" routerLinkActive #login="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': login.isActive }">
+
+
+            <span class="menu-title"><i class="fas fa-user-circle" style="font-size:20px;"></i>
+                {{'Login' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/signup" routerLinkActive #signup="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': signup.isActive }">
+
+
+            <span class="menu-title"><i class="fas fa-user-plus" style="font-size:20px;"></i>
+                {{'SignUp' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/lc" routerLinkActive #lc="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': lc.isActive }">
+
+
+            <span class="menu-title"> <i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'LIfeCycle' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/dummy" routerLinkActive #dummy="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': dummy.isActive }">
+
+
+            <span class="menu-title"> <i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'Dummy' | language}}</span>
+
+        </li>
+    </a>
+    <a class="" routerLink="/test1" routerLinkActive #test="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': test.isActive }"> <span class="menu-title"> <i class="fas fa-life-ring" style="font-size:20px;"></i> Test 1</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/userlist" routerLinkActive #ul="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': ul.isActive }">
+
+
+            <span class="menu-title"> <i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'UserList' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/userview" routerLinkActive #uv="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': uv.isActive }">
+
+
+            <span class="menu-title"> <i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'UserView' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/pagination" routerLinkActive #pagination="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': pagination.isActive }">
+
+
+            <span class="menu-title"><i class="fas fa-life-ring" style="font-size:20px;"></i>
+                {{'Pagination' | language}}</span>
+
+        </li>
+    </a>
+
+    <a class="" routerLink="/contact" routerLinkActive #contact="routerLinkActive">
+        <li class="listm" [ngClass]="{ 'active': contact.isActive }">
+
+
+            <span class="menu-title"> <i class="fas fa-address-book" style="font-size:20px;"></i>
+              {{'Contact' | language}}</span>
+
+        </li>
+    </a>
+
+    <li class="listm" [ngClass]="{'active' : cardhover.isActive || postcard.isActive || moviecard.isActive || ecom.isActive || dropdowns.isActive || modals.isActive || notifications.isActive || progressbar.isActive || pagination.isActive || tabs.isActive || typography.isActive || tooltips.isActive }">
+        <a class="" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="ui-basic">
+            <span>Basic UI Elements</span>
+            <i class="fas fa-angle-left"></i>
+            <i class="fas fa-angle-up"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!uiBasicCollapsed">
+            <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" routerLink="/cardhover" routerLinkActive="actives" #cardhover="routerLinkActive">Card Hover</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="/postcard" routerLinkActive="actives" #postcard="routerLinkActive">Blog Post Card</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="/moviecard" routerLinkActive="actives" #moviecard="routerLinkActive">Movie Card</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="/ecommerce" routerLinkActive="actives" #ecom="routerLinkActive">E Commerce</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/dropdowns" routerLinkActive="active" #dropdowns="routerLinkActive">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/modals" routerLinkActive="active" #modals="routerLinkActive">Modals</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/notifications" routerLinkActive="active" #notifications="routerLinkActive">Notifications</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/progressbar" routerLinkActive="active" #progressbar="routerLinkActive">Progress bar</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/pagination" routerLinkActive="active" #pagination="routerLinkActive">Pagination</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tabs" routerLinkActive="active" #tabs="routerLinkActive">Tabs</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/typography" routerLinkActive="active" #typography="routerLinkActive">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/tooltips" routerLinkActive="active" #tooltips="routerLinkActive">Tooltips</a></li>
+            </ul>
+        </div>
+    </li>
+
+</ul>

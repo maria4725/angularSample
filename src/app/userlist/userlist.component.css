@@ -1,0 +1,38 @@
+.row {
+    margin: 20px auto;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #d1cacae1;
+    margin-bottom: 25px;
+    padding-top: 8px;
+}
+
+.card-body {
+    padding-top: 2px;
+}
+
+li {
+    list-style: none;
+}
+
+.page-links {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.active {
+    background-color: #f7a9a9;
+    border: 1px solid #dee2e6;
+}
+
+.pagi {
+    background-color: rosybrown;
+}

@@ -1,0 +1,54 @@
+<nav aria-label="Page navigation example">
+    <div class="d-flex justify-content-end">
+        <li class="page-item">
+            <a class="page-link" (click)="setpage(1)" routerLinkActive #first="routerLinkActive">{{'FIRST' | language}}</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': prev.isActive }">
+            <a class="page-link" (click)="setpage(page-1)" routerLinkActive #prev="routerLinkActive">◄</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': page === 1 }">
+            <a class="page-link" (click)="setpage(1)" routerLinkActive #one="routerLinkActive">1</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': page === 2 }">
+            <a class="page-link" (click)="setpage(2)" routerLinkActive #firsts="routerLinkActive">2</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': page === 3 }">
+            <a class="page-link" (click)="setpage(3)" routerLinkActive #firsts="routerLinkActive">3</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': page === 4 }">
+            <a class="page-link" (click)="setpage(4)" routerLinkActive #firsts="routerLinkActive">4</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': page === 5 }">
+            <a class="page-link" (click)="setpage(5)" routerLinkActive #firsts="routerLinkActive">5</a>
+        </li>
+
+        <li class="page-item" [ngClass]="{ 'active': prev.isActive }">
+            <a class="page-link" (click)="setpage(page+1)" routerLinkActive #l="routerLinkActive">►</a>
+        </li>
+        <li class="page-item" [ngClass]="{ 'active': first.isActive }">
+            <a class="page-link" (click)="setpage(5)" routerLinkActive #first="routerLinkActive">{{'LAST' | language}}</a>
+        </li>
+    </div>
+</nav>
+<div class="row">
+    <!-- column -->
+
+
+    <div class="col col-sm-3" *ngFor="let eachemployee of employeeArray;index as i">
+        <!-- Card -->
+
+        <div *ngIf="eachemployee.EmployeeID>=initial&&eachemployee.EmployeeID<=end" class="card">
+            <img class="rounded-circle img-thumbnail align-self-center" src="assets/img/ellie_goulding.jpg" width="180">
+            <div class="card-body">
+                <h6 class="card-title">{{'NAME' | language}} : {{eachemployee.Name}}</h6>
+                <p class="card-text">{{'AGE' | language}} : {{eachemployee.Age}}</p>
+                <!-- <p class="card-text">{{'AGE' | language}} : {{eachemployee.City}}</p>
+                <p class="card-text">{{'AGE' | language}} : {{eachemployee.Country}}</p>
+                <p class="card-text">{{'AGE' | language}} : {{eachemployee['Date of joining']}}</p> -->
+
+                <a (click)="view(i)" routerLink="/userview/" class="btn btn-primary">{{'VIEWPROFILE' | language}}</a>
+            </div>
+        </div>
+        <!-- Card -->
+    </div>
+</div>

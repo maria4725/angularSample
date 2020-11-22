@@ -1,0 +1,21 @@
+<div class="PageWidth">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">{{'NAME' | language}}</th>
+                <th scope="col"> EMAIL</th>
+                <th scope="col">{{'MESSAGE' | language}}</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="bar">
+                <td>{{ comments.id }}</td>
+                <td>{{ comments.name }}</td>
+                <td>{{ comments.email }}</td>
+                <td>{{ comments.body }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

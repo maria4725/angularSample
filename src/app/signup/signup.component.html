@@ -1,0 +1,19 @@
+
+  <div class="container"> <div class="signup head">{{'SIGNUP' | language}}</div> 
+  
+  <font color="red">*</font> {{'FILL' | language}}! <br/>
+  
+  <input type="text" (keypress)="key()" placeholder="{{'ENTERUSERNAME' | language}}" name="uname" required><br/>
+  
+  
+  <input type="text" placeholder="{{'FIRSTNAME' | language}}" name="uname" required><br/>
+  <input type="text" placeholder="{{'LASTNAME' | language}}" name="uname" required><br/>
+  {{'GENDER' | language}}: <select name="gender" id="sex">
+   <option value="male">{{'MALE' | language}}</option>
+   <option value="female">{{'FEMALE' | language}}</option></select><br/>
+  <input type="password" placeholder="{{'NEWPASSWORD' | language}}" name="psw" required><br/>
+  <input type="password" placeholder="{{'CONFIRMPASSWORD' | language}}" name="psw" required><br/>
+  <label class="checkbox-inline"><input type="checkbox" required="required">
+  <a href="#">{{'ACCEPT' | language}}</a></label><br/>
+  
+  <button (click)="button()">{{'SIGNUP' | language}}SignUp</button>

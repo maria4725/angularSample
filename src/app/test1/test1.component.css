@@ -1,0 +1,22 @@
+ball {
+    z-index: 2;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: calc(50vw - 25px);
+    border: 1px solid #0000004d;
+    box-shadow: inset 0 -15px 15px -5px #00000033;
+}
+
+ground {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    box-shadow: inset 0 5px 5px -5px #0000001a;
+    background: linear-gradient(#eee, #ccc)
+}

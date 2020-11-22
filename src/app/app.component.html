@@ -1,0 +1,36 @@
+<div class="container-fluid body">
+
+    <div class="row">
+        <div class="col-2 cols" [hidden]="tog">
+
+            <div>
+                <app-leftmenu></app-leftmenu>
+            </div>
+
+        </div>
+        <div class="displayPageWithNavbar" [ngClass]="{'col-10 nop':!tog,'col-12 nop':tog}">
+
+            <div class="tog" (click)="toggle()">
+                <app-navbar></app-navbar>
+
+            </div>
+
+
+
+            <div class="displayPage">
+
+                <router-outlet></router-outlet>
+
+                <app-foot *ngIf="showFoot"></app-foot>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- <app-login></app-login>
+<app-signup></app-signup>
+<app-error></app-error>
+<app-lc></app-lc> -->

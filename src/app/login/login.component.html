@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="login head">
+        <h1>{{'LOGINPAGE' | language}}</h1>
+    </div>
+    <form id="re" #f="ngForm">
+        <div class="input-group">
+            <span class="input-group-text">
+                <span class="fa fa-user"></span>
+            </span>
+            <input name="username" ngModel type="text" (keypress)="key()" placeholder="{{'ENTERUSERNAME' | language}}">
+            <small *ngIf="f.pristine">{{'USERNAMEISREQUIERD' | language}}</small>
+        </div>
+
+
+        <div class="input-group">
+            <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+            </span>
+
+            <input name="password" ngModel type="password" placeholder="{{'ENTERPASSWORD' | language}}">
+            <small *ngIf="f.pristine">{{'PASSWORDISREQUIERD' | language}}</small>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitches">
+
+            <label class="custom-control-label" for="customSwitches">{{'REMEMBERPASSWORD' | language}}</label>
+        </div>
+
+
+        <button (click)="login(f)">{{'LOGIN' | language}}</button>
+
+    </form>
+</div>

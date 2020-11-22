@@ -1,0 +1,84 @@
+.cardim {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient( 135deg, #4b0908, #6a0c0b, #aa0505, #b97d10, #fbca03);
+}
+
+.cardim img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.cardim:hover img {
+    left: 80%;
+    height: 500px;
+}
+
+.cardim .containers {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.cardim:hover .containers {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.cardim:hover .containers h2 {
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.cardim .containers {
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .cardim {
+        position: relative;
+        width: auto;
+        max-width: 600px;
+        transition: 0.5s;
+        align-items: flex-start;
+    }
+    .cardim:hover {
+        height: 600px;
+    }
+    .cardim:hover img {
+        left: 50%;
+        height: 300px;
+    }
+    .cardim .containers {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cardim .containers {
+        padding: 30px;
+    }
+    .cardim:hover img {
+        height: 300px;
+    }
+}

@@ -1,0 +1,85 @@
+<!-- <br/>Swiching Theme:
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label> -->
+
+
+
+<!-- <br/><br/> -->
+
+<!-- <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div> -->
+<div class="PageWidth">
+    <nav aria-label="Page navigation example">
+        <div class="d-flex justify-content-end">
+
+            <ul>
+                <li class="">
+                    <a class="" (click)="setpage(1)" routerLinkActive #first="routerLinkActive">{{'FIRST' | language}}</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': prev.isActive }">
+                    <a class="" (click)="setpage(page-1)" routerLinkActive #prev="routerLinkActive">◄</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': page === 1 }">
+                    <a class="" (click)="setpage(1)" routerLinkActive #one="routerLinkActive">1</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': page === 2 }">
+                    <a class="" (click)="setpage(2)" routerLinkActive #firsts="routerLinkActive">2</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': page === 3 }">
+                    <a class="" (click)="setpage(3)" routerLinkActive #firsts="routerLinkActive">3</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': page === 4 }">
+                    <a class="" (click)="setpage(4)" routerLinkActive #firsts="routerLinkActive">4</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': page === 5 }">
+                    <a class="" (click)="setpage(5)" routerLinkActive #firsts="routerLinkActive">5</a>
+                </li>
+
+                <li class="" [ngClass]="{ 'active': prev.isActive }">
+                    <a class="" (click)="setpage(page+1)" routerLinkActive #l="routerLinkActive">►</a>
+                </li>
+                <li class="" [ngClass]="{ 'active': first.isActive }">
+                    <a class="" (click)="setpage(50)" routerLinkActive #first="routerLinkActive">{{'LAST' | language}}</a>
+                </li>
+
+            </ul>
+            <label for="page">{{'ITEMPERPAGES' | language}}: </label>
+
+            <select name="page" id="page" (change)="changePageLimit()">
+          <option >10</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        </div>
+    </nav>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{{'ID' | language}}</th>
+                    <th scope="col">{{'NAME' | language}}</th>
+                    <th scope="col">{{'MESSAGE' | language}}</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="bar" *ngFor="let tv of comments;index as i">
+                    <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.postId }}</td>
+                    <td *ngIf="tv.id>=initial&&tv.id<=end"><a (click)="view(i)" routerLink="/tabview/" class="btn btn-info">{{ tv.id }}</a></td>
+                    <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.name }}</td>
+                    <td *ngIf="tv.id>=initial&&tv.id<=end">{{ tv.body }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

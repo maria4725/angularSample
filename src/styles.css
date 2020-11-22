@@ -1,0 +1,31 @@
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+}
+
+p {
+    font-family: emoji;
+    color: red;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #e2dfdfc2;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #f1a3a3;
+    border-radius: 4px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #da89898a;
+}

@@ -1,0 +1,44 @@
+.body {
+    background-color: #f2edf3;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f1a3a3;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #da89898a;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cols {
+    padding: 0 0;
+}
+
+.nop {
+    padding: 0 0;
+}
+
+.tog {
+    background: #ffffff;
+    margin-bottom: 10%;
+}
+
+.displayPage {
+    margin-top: 60px;
+}
+
+.displayPageWithNavbar {
+    padding: 0px !important;
+}
